@@ -77,9 +77,15 @@ header label:hover {
   margin-bottom: 10px;
 }
 
+.menu li a:hover div, .menu .menu-active{
+  color: #4a1c9e;
+}
 .menu li a:hover div{
   background: #a06a7e;
-  color: #4a1c9e;
+}
+
+.menu .menu-active{
+  background-color: #769961 !important;
 }
 
 /** FOOTER **/
@@ -187,6 +193,147 @@ header label:hover {
 }
 /* END HOME PAGE */
 
+/******************************************************************************/
+/******************************************************************************/
+/* Historia */
+
+#history-title{
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.hist-acropolis{
+  background: url(../images/history_acropolis.jpg) no-repeat;
+  background-position: center center;
+  height: 15vw; /*1440*/
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.container .history-text{
+  font-family: 'Oxygen', serif;
+  font-size: 1.4rem;
+  text-align: justify;
+}
+
+.container .history-text a{
+  text-decoration: none;
+}
+
+.container .history-subtitle{
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+#sect-dark-ages{
+  clear: both;
+  padding-top: 2vw;
+}
+.image-dark-ages{
+  background: url(../images/history_dark_ages_800.jpg) no-repeat;
+  background-position: center center;
+  height: 40vw; /*1440*/
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.image-archaic{
+  background: url(../images/history_archaic.jpg) no-repeat;
+  background-position: center center;
+  height: 40vw; /*1440*/
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.image-classic-age{
+  background: url(../images/history-classic_2048.jpg) no-repeat;
+  background-position: center center;
+  height: 40vw; /*1440*/
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.image-helenistic{
+  background: url(../images/history-henistic-1280.jpg) no-repeat;
+  background-position: center center;
+  height: 40vw; /*1440*/
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.wrap-collabsible { 
+  margin: 5% 0 0 0; 
+} 
+
+#collapsible { 
+  display: none; 
+} 
+
+/* Collapsable BUTTON menu properties*/
+.lbl-toggle { 
+  display: block; 
+  font-weight: bold; 
+  font-family: monospace; 
+  font-size: 1.2rem; 
+  text-transform: uppercase; 
+  text-align: center; 
+  padding: 1rem; 
+  color: #DDD; 
+  background: #d85b12; 
+  cursor: pointer; 
+  border-radius: 7px; 
+  transition: all 0.25s ease-out; 
+} 
+.lbl-toggle:hover { 
+  color: #FFF; 
+} 
+
+/* Collapsed state*/
+.lbl-toggle::before { 
+  content: ' '; 
+  display: inline-block; 
+  border-top: 5px solid transparent; 
+  border-bottom: 5px solid transparent; 
+  border-left: 5px solid currentColor; 
+  vertical-align: middle; 
+  margin-right: .7rem; 
+  transform: translateY(-2px); 
+  transition: transform .2s ease-out; 
+} 
+
+/*Rotate arrow in button*/
+.toggle:checked+.lbl-toggle::before { 
+  transform: rotate(90deg) translateX(-3px); 
+} 
+
+/* Div to mark what is to be collapsed */
+.collapsible-content { 
+  max-height: 0px; 
+  overflow: hidden; 
+  transition: max-height .25s ease-in-out; 
+} 
+/* Button action */
+.toggle:checked + .lbl-toggle + .collapsible-content { 
+  max-height: 500px; 
+} 
+.toggle:checked+.lbl-toggle { 
+  border-bottom-right-radius: 0; 
+  border-bottom-left-radius: 0; 
+} 
+
+/* */
+.collapsible-content .content-inner { 
+  background: #b97852; 
+  border-bottom: 1px solid rgba(0, 105, 255, .45); 
+  border-bottom-left-radius: 7px; 
+  border-bottom-right-radius: 7px; 
+  padding: .5rem 1rem; 
+} 
+.collapsible-content ol { 
+  margin-left: 5%; 
+  font-size: 1.3em;
+}
 
 /******************************************************************************/
 /* Media queries */
@@ -218,11 +365,26 @@ header label:hover {
   .jumbotron .image{
     background: url(../images/parthenon_1280.jpg) no-repeat;
     background-position: center center;
-    height: 40vw; /*1440*/
+    height: 40vw; 
     background-clip: border-box;
     background-size: cover;
     border-radius: 20px;
   }
+
+  /** History page **/
+  .image-classic-age{
+    background: url(../images/history-classic_800.jpg) no-repeat;
+    background-position: center center;
+    height: 40vw; 
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  /* History Page */
+  .wrap-collabsible { 
+    margin: 3% 0 0 0; 
+  } 
+
 }
 /********** Small devices only **********/
 @media (max-width: 991px) {
@@ -292,6 +454,42 @@ header label:hover {
     background: url(../images/acropolis_640.jpg) no-repeat;
     background-size: cover;
     opacity: 0.9;
+  }
+
+  /** History page **/
+
+  .hist-acropolis{
+    background: url(../images/history_acropolis.jpg) no-repeat;
+    background-position: center center;
+    height: 40vw; /*1440*/
+    background-size: cover;
+    border-radius: 20px;
+    margin-top: 5vw;
+  }
+
+  .image-dark-ages{
+    background: url(../images/history_dark_ages_400.jpg) no-repeat;
+    background-position: center center;
+    height: 40vw; /*1440*/
+    background-clip: border-box;
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  .image-classic-age{
+    background: url(../images/history-classic_400.jpg) no-repeat;
+    background-position: center center;
+    height: 40vw; 
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  .image-helenistic{
+    background: url(../images/history-henistic-640.jpg) no-repeat;
+    background-position: center center;
+    height: 40vw; /*1440*/
+    background-size: cover;
+    border-radius: 20px;
   }
 
 }
@@ -631,7 +829,7 @@ header label:hover {
 
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
-@media (max-width: 479px) {
+@media (min-width: 200px) and (max-width: 479px) {
 
   .visible-xxs {
     display: block !important;
