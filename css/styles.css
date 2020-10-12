@@ -1,0 +1,693 @@
+
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #B39770;
+  font-family: 'Oxygen', sans-serif;
+}
+
+/******************************************************************************/
+/** HEADER **/
+
+#header-nav{
+  background: #769961 /*linear-gradient(to bottom, #569243, white); */
+}
+
+#logo-img {
+  background: url(../images/logo.png) no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  margin: 10px 15px 10px 0;
+}
+
+header h1{
+  display: inline-block;
+  font-family: 'Lora', serif;
+  color: #c4321f;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 50px;
+  line-height: .75;
+}
+
+#btn-menu {
+  display: none;   /* oculta el checkbox cuando no es necesario*/
+} 
+
+header label {     /* coloca el checkbox en un lugar y tamaño exactos*/
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+} 
+header label:hover {
+  cursor: pointer;    /* cambia el cursor sobre el checkbox para indicar la interacción*/
+}
+
+.menu{
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  text-align: right;
+}
+
+.menu ul{
+  list-style: none;     /* para evitar los bullit list en la lista*/
+  padding: 0;
+  display: flex;
+  margin-right: -30px;
+}
+
+.menu li a{
+  font-family: 'Lora', serif;
+  text-decoration: none; 
+}
+
+.menu li a div{
+  color: #d40e0e;
+  font-size: 1.4rem;
+  text-align: center;
+  width: auto;
+  padding: 0 2vw 0 2vw;
+  margin-bottom: 10px;
+}
+
+.menu li a:hover div{
+  background: #a06a7e;
+  color: #4a1c9e;
+}
+
+/** FOOTER **/
+
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #2b2323;
+  opacity: 0.9;
+  border-top: 1px solid #ddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+#designer a{
+  text-decoration: none; 
+  color: #ddd;
+}
+
+/******************************************************************************/
+/******************************************************************************/
+/* HOME PAGE */
+
+.jumbotron{
+  position: relative;
+  overflow: hidden;
+  margin: 20px -15px 0px -15px;
+}
+
+.jumbotron .image{
+  background: url(../images/parthenon_1920.jpg) no-repeat;
+  background-position: center center;
+  height: 40vw; /*1440*/
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.container #introduction{
+  font-family: 'Oxygen', serif;
+  font-size: 1.4rem;
+  text-align: justify;
+}
+
+#link-boxes{
+  background: url(../images/greek_coast_1280.jpg) no-repeat fixed;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.9;
+  margin: 0 0px 0 0px;
+}
+
+#link-boxes .ubicacion,
+#link-boxes .personajes,
+#link-boxes .actividades,
+#link-boxes .historia,
+#link-boxes .creditos{
+  position: relative;
+  height: 300px;
+  background-color: #222;
+  margin: 10px 0 10px 0;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #222;
+}
+#link-boxes p{
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  right: 0%;
+  width: 100%;
+  padding: 2% 0 2% 0;
+  background-color: #222;
+  color: #ffffff;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+#link-boxes a:hover div{
+  box-shadow: 5px 5px 10px 1px #d33303;
+}
+
+#link-boxes .ubicacion{
+  background: url(../images/greece_map.jpg) no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+#link-boxes .personajes{
+  background: url(../images/school_1280.jpg) no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+#link-boxes .actividades{
+  background: url(../images/olympics_583.jpg) no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+#link-boxes .historia{
+  background: url(../images/acropolis_1280.jpg) no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+#link-boxes .creditos{
+  background: url(../images/credits.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.9;
+}
+/* END HOME PAGE */
+
+
+/******************************************************************************/
+/* Media queries */
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+}
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  /** Header **/
+  .menu{
+    right: 5px;
+  }
+  
+  .menu ul{
+    margin-right: 0px;
+  }
+
+  .menu li a div{
+    text-align: center;
+    width: auto;
+    font-size: 1.2rem;
+    padding: 0 1.2vw 0 1.3vw;
+    margin-bottom: 10px;
+  }
+
+  /** HOME page **/
+  .jumbotron .image{
+    background: url(../images/parthenon_1280.jpg) no-repeat;
+    background-position: center center;
+    height: 40vw; /*1440*/
+    background-clip: border-box;
+    background-size: cover;
+    border-radius: 20px;
+  }
+}
+/********** Small devices only **********/
+@media (max-width: 991px) {
+
+  #header-nav{
+    height: 80px;
+  }
+
+  header h1{
+    margin-top: 40px;
+    margin-left: 5vw;
+  }
+
+  .menu {
+    position: fixed;  /* sostiene la posición aunque se haga scroll en el contenido */
+    right: 1vw;
+    top: 90px;
+    background: rgba(0.5, 0.5, 0.5, 0.7); /* rojo, verde, azul, alpha (transparencia) */
+    z-index: 30; /* para asegurar que el menu esta por encima de todo lo demás*/
+    width: 30vw; /* se refiere al ancho del fondo del menu y no a los botones */
+    margin-right: -60%; /* se oculta porque se coloca por fuera de la ventana*/
+    transition: all 1s;   /* la animación de desplegar el menu dura 1 segundo*/
+  } 
+  .menu ul {
+    flex-direction: column;  /* se despliega en sentido vertical*/
+  } 
+  .menu li a div{
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+  .menu li a:hover div{
+    color: #b4dd92;
+    background: #c4321f;
+  }
+  header label{
+    display: block; /* se muestra el checkbox cuando se reduce la ventana*/
+  } 
+  #btn-menu:checked ~ .menu {  /* el checkbox controla las dos posiciones del menu */
+          margin: 1px; 
+  } 
+
+  /** Home Page **/
+  .jumbotron .image{
+    background: url(../images/parthenon_640.jpg) no-repeat;
+    background-position: center center;
+    height: 40vw; /*1440*/
+    background-clip: border-box;
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  #link-boxes .row{
+    margin: 0 10px 0 10px;
+  }
+
+  #link-boxes .personajes{
+    background: url(../images/school_640.jpg) no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+  }
+  #link-boxes .actividades{
+    background: url(../images/olympics_469.jpg) no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+  }
+  #link-boxes .historia{
+    background: url(../images/acropolis_640.jpg) no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+  }
+
+}
+
+@media (min-width: 768px){
+  #designer div{
+    position: absolute;
+    right: 4vw;
+    text-align: left;
+  }
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 479px) {
+  
+  .menu {
+    width: 40vw !important; /* se refiere al ancho del fondo del menu y no a los botones */
+  } 
+
+  .menu li a div{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0 0 0 0;
+  }
+
+}
+
+/***********************************************************************************/
+/***********************************************************************************/
+/***********************************************************************************/
+/*** Common properties **/
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.container {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 15px;
+  margin-left:  15px;
+}
+
+.container > .navbar-header, .container > .navbar-collapse{
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.container .jumbotron{
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 6px;
+}
+
+.jumbotron .container {
+  max-width: 100%;
+}
+
+.row:before,
+.row:after,
+.container:before,
+.container:after{
+  display: table;
+  content: " ";
+}
+.container:after{
+  clear: both;
+}
+
+.visible-xxs,
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+  display: none !important;
+}
+
+.pull-left{
+  float: left;
+}
+
+.pull-right{
+  float: right;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-right: -15px;
+  padding-left: -15px;
+}
+
+/***********************************************************************************/
+/***********************************************************************************/
+/***********************************************************************************/
+/*** Common properties in media queries **/
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+
+
+  .visible-lg {
+    display: block !important;
+  }
+
+  .hidden-lg {
+    display: none !important;
+  }
+
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+  }
+  .col-lg-1 {
+    width: 8.33%;
+  }
+  .col-lg-2 {
+    width: 16.66%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.33%;
+  }
+  .col-lg-5 {
+    width: 41.66%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.33%;
+  }
+  .col-lg-8 {
+    width: 66.66%;
+  }
+  .col-lg-9 {
+    width: 74.99%;
+  }
+  .col-lg-10 {
+    width: 83.33%;
+  }
+  .col-lg-11 {
+    width: 91.66%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+  .visible-md {
+    display: block !important;
+  }
+
+  .hidden-md {
+    display: none !important;
+  }
+
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+  }
+  .col-md-1 {
+    width: 8.33%;
+  }
+  .col-md-2 {
+    width: 16.66%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33%;
+  }
+  .col-md-5 {
+    width: 41.66%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.33%;
+  }
+  .col-md-8 {
+    width: 66.66%;
+  }
+  .col-md-9 {
+    width: 74.99%;
+  }
+  .col-md-10 {
+    width: 83.33%;
+  }
+  .col-md-11 {
+    width: 91.66%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .visible-sm {
+    display: block !important;
+  }
+  .hidden-sm {
+    display: none !important;
+  }
+
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+  }
+
+  .col-sm-1 {
+    width: 8.33%;
+  }
+  .col-sm-2 {
+    width: 16.66%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.33%;
+  }
+  .col-sm-5 {
+    width: 41.66%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.33%;
+  }
+  .col-sm-8 {
+    width: 66.66%;
+  }
+  .col-sm-9 {
+    width: 74.99%;
+  }
+  .col-sm-10 {
+    width: 83.33%;
+  }
+  .col-sm-11 {
+    width: 91.66%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+  
+}
+
+/********** Extra small devices only **********/
+@media (min-width: 480px) and (max-width: 767px){
+
+  .visible-xs {
+    display: block !important;
+  }
+  .hidden-xs {
+    display: none !important;
+  }
+
+  .container > .navbar-header, .container > .navbar-collapse{
+    margin-right: 0;
+    margin-left:  0;
+  }
+
+  .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+  }
+
+  .col-xs-1 {
+    width: 8.33%;
+  }
+  .col-xs-2 {
+    width: 16.66%;
+  }
+  .col-xs-3 {
+    width: 25%;
+  }
+  .col-xs-4 {
+    width: 33.33%;
+  }
+  .col-xs-5 {
+    width: 41.66%;
+  }
+  .col-xs-6 {
+    width: 50%;
+  }
+  .col-xs-7 {
+    width: 58.33%;
+  }
+  .col-xs-8 {
+    width: 66.66%;
+  }
+  .col-xs-9 {
+    width: 74.99%;
+  }
+  .col-xs-10 {
+    width: 83.33%;
+  }
+  .col-xs-11 {
+    width: 91.66%;
+  }
+  .col-xs-12 {
+    width: 100%;
+  }
+
+
+}
+
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+
+  .visible-xxs {
+    display: block !important;
+  }
+  .hidden-xxs {
+    display: none !important;
+  }
+
+  .container > .navbar-header,.container > .navbar-collapse{
+    margin-right: 0;
+    margin-left:  0;
+  }
+
+  .col-xxs-1, .col-xxs-2, .col-xxs-3, .col-xxs-4, .col-xxs-5, .col-xxs-6, .col-xxs-7, .col-xxs-8, .col-xxs-9, .col-xxs-10, .col-xxs-11, .col-xxs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+  }
+
+  .col-xxs-1 {
+    width: 8.33%;
+  }
+  .col-xxs-2 {
+    width: 16.66%;
+  }
+  .col-xxs-3 {
+    width: 25%;
+  }
+  .col-xxs-4 {
+    width: 33.33%;
+  }
+  .col-xxs-5 {
+    width: 41.66%;
+  }
+  .col-xxs-6 {
+    width: 50%;
+  }
+  .col-xxs-7 {
+    width: 58.33%;
+  }
+  .col-xxs-8 {
+    width: 66.66%;
+  }
+  .col-xxs-9 {
+    width: 74.99%;
+  }
+  .col-xxs-10 {
+    width: 83.33%;
+  }
+  .col-xxs-11 {
+    width: 91.66%;
+  }
+  .col-xxs-12 {
+    width: 100%;
+  }
+
+}
