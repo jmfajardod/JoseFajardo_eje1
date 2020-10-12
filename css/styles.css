@@ -195,12 +195,114 @@ header label:hover {
 
 /******************************************************************************/
 /******************************************************************************/
+/* Personajes */
+
+#character-page-title{
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.collapsible-content ol ol{ 
+  margin-left: 7%; 
+  font-size: 1em;
+}
+
+.character-title{
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+#philosophers,
+#artists,
+#politicians{
+  color: #2b2323;
+  font-size: 2rem;
+  padding-top: 2vw;
+  clear: both;
+  margin-bottom: 1vw;
+}
+
+.right-image-text-box{
+  clear: both;
+  position: relative;
+}
+
+.right-image-text-box h2{
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: 'Lora', serif;
+  margin-bottom: 1vw;
+  margin-top: 2vw;
+}
+.right-image-text-box p{
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.right-image-text-box .image{
+  float: right;
+  width: 40vw;
+  height: 27vw;
+  margin: 0px 0px 30px 30px;
+}
+
+#character-socrates-image{
+  background: url(../images/charc-socrates-800.jpg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 20px;
+}
+#character-democritus-image{
+  background: url(../images/charc-democritus-1280.jpg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 20px;
+}
+#character-protagoras-image{
+  background: url(../images/char-protagoras-1280.jpg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 20px;
+}
+#character-polykleitos-image{
+  background: url(../images/char-polykleites-800.jpg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 20px;
+}
+#character-phidias-image{
+  background: url(../images/char-phidias-800.jpg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 20px;
+}
+#character-myron-image{
+  background: url(../images/char-myron-800.jpg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 40px;
+}
+#character-pericles-image{
+  background: url(../images/char-pericles-800.jpg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 40px;
+}
+#character-lisander-image{
+  background: url(../images/char-lysander-800.jpg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 40px;
+}
+/******************************************************************************/
+/******************************************************************************/
 /* Historia */
 
 #history-title{
   font-family: 'Lora', serif;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
 }
 
 .hist-acropolis{
@@ -371,6 +473,15 @@ header label:hover {
     border-radius: 20px;
   }
 
+  /** Characters page **/
+  .right-image-text-box .image{
+    float: right;
+    width: 50vw;
+    height: 33vw;
+    margin: 0px 0px 30px 30px;
+  }
+
+
   /** History page **/
   .image-classic-age{
     background: url(../images/history-classic_800.jpg) no-repeat;
@@ -454,6 +565,63 @@ header label:hover {
     background: url(../images/acropolis_640.jpg) no-repeat;
     background-size: cover;
     opacity: 0.9;
+  }
+
+  /** Characters page **/
+  .right-image-text-box .image{
+    float: unset;
+    width: 90%;
+    height: 40vw; /*1440*/
+    margin: 0px 0px 30px 30px;
+  }
+
+  #character-socrates-image{
+    background: url(../images/charc-socrates-400.jpg) no-repeat;
+    background-position: top center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  #character-democritus-image{
+    background: url(../images/charc-democritus-640.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  #character-protagoras-image{
+    background: url(../images/char-protagoras-500.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  #character-polykleitos-image{
+    background: url(../images/char-polykleites-400.jpg) no-repeat;
+    background-position: top center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  #character-phidias-image{
+    background: url(../images/char-phidias-400.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  #character-myron-image{
+    background: url(../images/char-myron-400.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  #character-pericles-image{
+    background: url(../images/char-pericles-400.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  #character-lisander-image{
+    background: url(../images/char-lysander-400.jpg) no-repeat;
+    background-position: top center;
+    background-size: cover;
+    border-radius: 40px;
   }
 
   /** History page **/
