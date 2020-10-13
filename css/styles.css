@@ -525,23 +525,92 @@ header label:hover {
 }
 
 /******************************************************************************/
+/******************************************************************************/
+/* Creditos */
+
+#credits-title{
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+.creditos-links{
+  margin-bottom: 3vh;
+}
+.creditos-links h3{
+  font-family: 'Lora', serif;
+  font-size: 2em;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+}
+
+.creditos-links ul{
+  font-family: 'Oxygen', serif;
+  font-size: 1.5em;
+  list-style-type: none;
+  margin-top: 1vh;
+  margin-left: 3vw;
+}
+
+#back-map{
+  position: relative;
+  background: #a18762;
+  opacity: 0.8;
+  border-radius: 50px;
+  padding: 10px 0 30px 0;
+}
+
+#navigation-map{
+  position: relative;
+  background: url(../images/MapaNavegacion.png) no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 40vw;
+  margin: 0 0 0 5vw;
+}
+
+/******************************************************************************/
 /* Media queries */
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
 
-  /** **/
+  /** Activities **/
   .panel-right-image .text,
   .panel-left-image .text{
     margin-top: 5vw;
   }
+
 }
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+
+  .menu li a div{
+    text-align: center;
+    width: auto;
+    font-size: 1.3rem;
+    padding: 0 0vw 0 2vw;
+    margin-bottom: 10px;
+  }
+
+  /** Credits **/
+  #navigation-map{
+    position: relative;
+    background: url(../images/MapaNavegacion.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 50vw;
+    margin: 0 0 0 5vw;
+  }
+}
+
 /********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 901px) and (max-width: 999px) {
 
   /** Header **/
   .menu{
-    right: 5px;
+    right: 0px;
   }
   
   .menu ul{
@@ -551,8 +620,8 @@ header label:hover {
   .menu li a div{
     text-align: center;
     width: auto;
-    font-size: 1.2rem;
-    padding: 0 1.2vw 0 1.3vw;
+    font-size: 1.1rem;
+    padding: 0 0vw 0 2vw;
     margin-bottom: 10px;
   }
 
@@ -595,9 +664,19 @@ header label:hover {
     margin: 3% 0 0 0; 
   } 
 
+  /** Credits **/
+  #navigation-map{
+    position: relative;
+    background: url(../images/MapaNavegacion.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 50vw;
+    margin: 0 0 0 5vw;
+  }
+
 }
 /********** Small devices only **********/
-@media (max-width: 991px) {
+@media (max-width: 900px) {
 
   #header-nav{
     height: 80px;
@@ -795,6 +874,25 @@ header label:hover {
     border-radius: 20px;
   }
 
+  /** Credits page **/
+  .creditos-links h3{
+    font-size: 1.5em;
+    margin-top: 3vh;
+  }
+  
+  .creditos-links ul{
+    font-size: 1.2em;
+  }
+
+  #navigation-map{
+    position: relative;
+    background: url(../images/MapaNavegacion.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 60vw;
+    margin: 0 0 0 7vw;
+  }
+
 }
 
 @media (min-width: 768px){
@@ -806,7 +904,7 @@ header label:hover {
 }
 
 /********** Extra small devices only **********/
-@media (max-width: 479px) {
+@media (max-width: 600px) {
   
   .menu {
     width: 40vw !important; /* se refiere al ancho del fondo del menu y no a los botones */
@@ -821,6 +919,16 @@ header label:hover {
   /** Ubicacion **/
   #greek-map{
     height: 80vh;
+  }
+
+  /** Credits **/
+  #navigation-map{
+    position: relative;
+    background: url(../images/MapaNavegacion.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 50vw;
+    margin: 0 0 0 6vw;
   }
 
 }
@@ -958,7 +1066,7 @@ header label:hover {
 }
 
 /********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 901px) and (max-width: 1199px) {
 
 
   .visible-md {
@@ -1016,7 +1124,7 @@ header label:hover {
 }
 
 /********** Small devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 900px) {
 
   .visible-sm {
     display: block !important;
@@ -1073,7 +1181,7 @@ header label:hover {
 }
 
 /********** Extra small devices only **********/
-@media (min-width: 480px) and (max-width: 767px){
+@media (min-width: 601px) and (max-width: 767px){
 
   .visible-xs {
     display: block !important;
@@ -1136,8 +1244,8 @@ header label:hover {
 }
 
 
-/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
-@media (min-width: 200px) and (max-width: 479px) {
+/********** Super extra small devices Only :-) **********/
+@media (min-width: 200px) and (max-width: 600px) {
 
   .visible-xxs {
     display: block !important;
