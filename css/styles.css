@@ -1,50 +1,63 @@
+/******************************************************************************/
+/* Estilos que aplican a todos los elementos */
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 
 body {
-  font-size: 16px;
-  color: #fff;
-  background-color: #B39770;
-  font-family: 'Oxygen', sans-serif;
+  font-size: 16px; /* Definicion del tamaño de letra predeterminado */
+  color: #fff;   /* Definicion del color de la letra predeterminado */
+  background-color: #B39770; /* Definicion del color de fondo predeterminado */
+  font-family: 'Oxygen', sans-serif; /* Definicion de las fuentes predeterminadas del texto */
 }
 
 /******************************************************************************/
-/** HEADER **/
+/** Estilos del header **/
 
 #header-nav{
-  background: #769961 /*linear-gradient(to bottom, #569243, white); */
+  background: #769961 /* Color de fondo del menu de navegacion */
 }
 
+/* Estilos del logo de la pagina */
 #logo-img {
-  background: url(../images/logo.png) no-repeat;
-  background-size: contain;
-  width: 100px;
-  height: 100px;
-  margin: 10px 15px 10px 0;
+  background: url(../images/logo.png) no-repeat; /* Se asocia una imagen al fondo del div del logo */
+  background-size: contain; /* Se define que la imagen se escale a las medidas del div del logo */
+  width: 100px; /* Se define el ancho del logo */
+  height: 100px; /* Se define el alto del logo */
+  margin: 10px 15px 10px 0; /* Se define el margen del logo*/
 }
 
+/* Estilo del titulo h1 dentro del header */
 header h1{
   display: inline-block;
   font-family: 'Lora', serif;
-  color: #c4321f;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px #222;
+  color: #c4321f; 
+  font-size: 1.5em; /* Se define que el tamaño de la letra sea relativo al predeterminado */
+  text-transform: uppercase; /* Se define que todo el texto este en mayusculas */
+  font-weight: bold; /* Se cambia el estilo del texto a negrita */
+  text-shadow: 1px 1px 1px #222; /* Se define una sombra al texto */
   margin-top: 50px;
-  line-height: .75;
+  line-height: .75; /* Se cambia el espaciado entre lineas */
 }
 
+/* Estilos del boton del menu de navegacion */
 #btn-menu {
   display: none;   /* oculta el checkbox cuando no es necesario*/
 } 
 
+/* Estilo de los labels incluidos dentro del header */
 header label {     /* coloca el checkbox en un lugar y tamaño exactos*/
-  display: none;
+  display: none;   /* se esconde el elemento al que refiere el label por defecto */
   width: 30px;
   height: 30px;
-  position: absolute;
-  right: 20px;
-  top: 30px;
+  position: absolute; /* Se define que el posicionamiento del elemento sea en coordenadas globales (absolutas) */
+  right: 20px; /* Se define la distancia con respecto al borde derecho del elemento "padre" a la cual va a estar el elemento */
+  top: 30px;  /* Se define la distancia con respecto al borde superior del elemento "padre" a la cual va a estar el elemento */
 } 
+/* Estilo de los elementos asociados a los labels cuando se pasa el cursor por encima de estos */
 header label:hover {
   cursor: pointer;    /* cambia el cursor sobre el checkbox para indicar la interacción*/
 }
@@ -53,11 +66,12 @@ header label:hover {
   position: absolute;
   right: 30px;
   top: 50%;
-  text-align: right;
+  text-align: right; /* Se alinea el texto a la derecha del elemento */
 }
 
+/* Estilos para las listas sin orden del menu */
 .menu ul{
-  list-style: none;     /* para evitar los bullit list en la lista*/
+  list-style: none;     /* Se remueven los bullet points de la lista*/
   padding: 0;
   display: flex;
   margin-right: -30px;
@@ -73,7 +87,7 @@ header label:hover {
   font-size: 1.4rem;
   text-align: center;
   width: auto;
-  padding: 0 2vw 0 2vw;
+  padding: 0 2vw 0 2vw; /* Se define que el padding sea proporcial al ancho de la ventana o la pantalla del dispositivo (vw - viewport widht) */
   margin-bottom: 10px;
 }
 
@@ -85,32 +99,33 @@ header label:hover {
 }
 
 .menu .menu-active{
-  background-color: #769961 !important;
+  background-color: #769961 !important; /* Se da un atributo de important al color de fondo del menu, es decir que sin importar si se define en otra linea, el valor a usar sera este */
 }
 
-/** FOOTER **/
+/******************************************************************************/
+/** Estilos del footer **/
 
 .panel-footer {
   padding: 10px 15px;
   background-color: #2b2323;
   opacity: 0.9;
   border-top: 1px solid #ddd;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; /* Se realiza un redondeado de la esquina inferior derecha del footer */
+  border-bottom-left-radius: 3px;  /* Se realiza un redondeado de la esquina inferior izquierda del footer */
 }
 
 #designer a{
-  text-decoration: none; 
+  text-decoration: none; /* Se cambia el estilo a los enlaces dentro del div designer del footer */
   color: #ddd;
 }
 
 /******************************************************************************/
 /******************************************************************************/
-/* HOME PAGE */
+/* Estilos de la pagina de inicio */
 
 .jumbotron{
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* En caso de que los elementos sean mas grandes que el tamaño de div se escondera el exceso */
   margin: 20px -15px 0px -15px;
 }
 
@@ -195,7 +210,7 @@ header label:hover {
 
 /******************************************************************************/
 /******************************************************************************/
-/* Ubicacion */
+/* Estilos de la pagina de ubicacion */
 
 
 #geography-page-title{
@@ -212,7 +227,7 @@ header label:hover {
 
 /******************************************************************************/
 /******************************************************************************/
-/* Personajes */
+/* Estilos de la pagina de personajes */
 
 #character-page-title{
   font-family: 'Lora', serif;
@@ -316,7 +331,7 @@ header label:hover {
 
 /******************************************************************************/
 /******************************************************************************/
-/* Actividades */
+/* Estilos de la pagina de actividades */
 
 #activities-title{
   font-family: 'Lora', serif;
@@ -383,7 +398,7 @@ header label:hover {
 
 /******************************************************************************/
 /******************************************************************************/
-/* Historia */
+/* Estilos de la pagina de historia */
 
 #history-title{
   font-family: 'Lora', serif;
@@ -395,7 +410,7 @@ header label:hover {
 .hist-acropolis{
   background: url(../images/history_acropolis.jpg) no-repeat;
   background-position: center center;
-  height: 15vw; /*1440*/
+  height: 15vw; 
   background-size: cover;
   border-radius: 20px;
 }
@@ -422,7 +437,7 @@ header label:hover {
 .image-dark-ages{
   background: url(../images/history_dark_ages_800.jpg) no-repeat;
   background-position: center center;
-  height: 40vw; /*1440*/
+  height: 40vw; 
   background-size: cover;
   border-radius: 20px;
 }
@@ -430,7 +445,7 @@ header label:hover {
 .image-archaic{
   background: url(../images/history_archaic.jpg) no-repeat;
   background-position: center center;
-  height: 40vw; /*1440*/
+  height: 40vw; 
   background-size: cover;
   border-radius: 20px;
 }
@@ -438,7 +453,7 @@ header label:hover {
 .image-classic-age{
   background: url(../images/history-classic_2048.jpg) no-repeat;
   background-position: center center;
-  height: 40vw; /*1440*/
+  height: 40vw; 
   background-size: cover;
   border-radius: 20px;
 }
@@ -446,7 +461,7 @@ header label:hover {
 .image-helenistic{
   background: url(../images/history-henistic-1280.jpg) no-repeat;
   background-position: center center;
-  height: 40vw; /*1440*/
+  height: 40vw; 
   background-size: cover;
   border-radius: 20px;
 }
@@ -459,7 +474,7 @@ header label:hover {
   display: none; 
 } 
 
-/* Collapsable BUTTON menu properties*/
+/* Estilos del boton del menu colapsable de contenidos*/
 .lbl-toggle { 
   display: block; 
   font-weight: bold; 
@@ -478,7 +493,7 @@ header label:hover {
   color: #FFF; 
 } 
 
-/* Collapsed state*/
+/* Estilos del menu de contenido cuando esta colapsado*/
 .lbl-toggle::before { 
   content: ' '; 
   display: inline-block; 
@@ -491,18 +506,18 @@ header label:hover {
   transition: transform .2s ease-out; 
 } 
 
-/*Rotate arrow in button*/
+/*Estilo para rotar la flecha del menu del contenido dependiendo del estado*/
 .toggle:checked+.lbl-toggle::before { 
   transform: rotate(90deg) translateX(-3px); 
 } 
 
-/* Div to mark what is to be collapsed */
+/* Estilos del elemento div que contiene los elementos del contenido*/
 .collapsible-content { 
   max-height: 0px; 
   overflow: hidden; 
   transition: max-height .25s ease-in-out; 
 } 
-/* Button action */
+/* Accion del boton */
 .toggle:checked + .lbl-toggle + .collapsible-content { 
   max-height: 500px; 
 } 
@@ -511,7 +526,7 @@ header label:hover {
   border-bottom-left-radius: 0; 
 } 
 
-/* */
+/* Estilos de los contenidos del menu de contenido */
 .collapsible-content .content-inner { 
   background: #b97852; 
   border-bottom: 1px solid rgba(0, 105, 255, .45); 
@@ -519,6 +534,7 @@ header label:hover {
   border-bottom-right-radius: 7px; 
   padding: .5rem 1rem; 
 } 
+/* Estilos de las listas sin ordenar del menu de contenidos */
 .collapsible-content ol { 
   margin-left: 5%; 
   font-size: 1.3em;
@@ -526,7 +542,7 @@ header label:hover {
 
 /******************************************************************************/
 /******************************************************************************/
-/* Creditos */
+/* Estilos de la pagina de creditos */
 
 #credits-title{
   font-family: 'Lora', serif;
@@ -573,7 +589,7 @@ header label:hover {
 /******************************************************************************/
 /* Media queries */
 
-/********** Large devices only **********/
+/********** Media queries para pantallas grandes **********/
 @media (min-width: 1200px) {
 
   /** Activities **/
@@ -605,7 +621,7 @@ header label:hover {
   }
 }
 
-/********** Medium devices only **********/
+/********** Media queries para pantallas de tamaño medio **********/
 @media (min-width: 901px) and (max-width: 999px) {
 
   /** Header **/
@@ -659,7 +675,6 @@ header label:hover {
     border-radius: 20px;
   }
 
-  /* History Page */
   .wrap-collabsible { 
     margin: 3% 0 0 0; 
   } 
@@ -675,7 +690,7 @@ header label:hover {
   }
 
 }
-/********** Small devices only **********/
+/********** Media queries para pantallas pequeñas **********/
 @media (max-width: 900px) {
 
   #header-nav{
@@ -717,9 +732,9 @@ header label:hover {
 
   /** Home Page **/
   .jumbotron .image{
-    background: url(../images/parthenon_640.jpg) no-repeat;
+    background: url(../images/parthenon_640.jpg) no-repeat; /* Se cambia la imagen del fondo a una de menor tamaño para que se pueda cargar mas rapido la imagen */
     background-position: center center;
-    height: 40vw; /*1440*/
+    height: 40vw; 
     background-clip: border-box;
     background-size: cover;
     border-radius: 20px;
@@ -903,7 +918,7 @@ header label:hover {
   }
 }
 
-/********** Extra small devices only **********/
+/********** Media queries para pantallas mas pequeñas **********/
 @media (max-width: 600px) {
   
   .menu {
@@ -936,14 +951,8 @@ header label:hover {
 /***********************************************************************************/
 /***********************************************************************************/
 /***********************************************************************************/
-/*** Common properties **/
-
-*{
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-}
-
+/*** Propiedades comunes para varias paginas (Algunas se copiaron del CSS de 
+     Bootstrap para realizar el RWD de manera mas rapida )                        **/
 
 .container {
   position: relative;
@@ -979,6 +988,7 @@ header label:hover {
   clear: both;
 }
 
+/* Se definen una clases para hacer visible elementos en tamaños especificos de pantallas */
 .visible-xxs,
 .visible-xs,
 .visible-sm,
@@ -987,6 +997,7 @@ header label:hover {
   display: none !important;
 }
 
+/* Se definen una clases para hacer posicionar de manera flotante algunos elementos ya sea a la izquierda o a la derecha */
 .pull-left{
   float: left;
 }
@@ -1005,20 +1016,22 @@ header label:hover {
 /***********************************************************************************/
 /***********************************************************************************/
 /***********************************************************************************/
-/*** Common properties in media queries **/
+/*** Media queries para definir tamaño de las columnas de los elementos **/
 
-/********** Large devices only **********/
+/********** Media queries para pantallas grandes **********/
 @media (min-width: 1200px) {
 
-
+  /* Se define una clase para que el elemento sea solo visible en este tamaño */
   .visible-lg {
     display: block !important;
   }
 
+  /* Se define una clase para que el elemento NO sea visible en este tamaño */
   .hidden-lg {
     display: none !important;
   }
 
+  /* Se definen clases que definen el tamaño de los elementos (utilizando la grilla  de 12 columnas de Bootstrap) */
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     position: relative;
     min-height: 1px;
@@ -1065,7 +1078,7 @@ header label:hover {
 
 }
 
-/********** Medium devices only **********/
+/********** Media queries para pantallas medianas **********/
 @media (min-width: 901px) and (max-width: 1199px) {
 
 
@@ -1123,7 +1136,7 @@ header label:hover {
 
 }
 
-/********** Small devices only **********/
+/********** Media queries para pantallas pequeñas **********/
 @media (min-width: 768px) and (max-width: 900px) {
 
   .visible-sm {
@@ -1180,7 +1193,7 @@ header label:hover {
   
 }
 
-/********** Extra small devices only **********/
+/********** Media queries para pantallas mas pequeñas **********/
 @media (min-width: 601px) and (max-width: 767px){
 
   .visible-xs {
@@ -1244,7 +1257,7 @@ header label:hover {
 }
 
 
-/********** Super extra small devices Only :-) **********/
+/********** Media queries para pantallas MUY pequeñas **********/
 @media (min-width: 200px) and (max-width: 600px) {
 
   .visible-xxs {
