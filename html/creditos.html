@@ -1,18 +1,37 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Grecia Antigua</title>
-    <link rel="stylesheet" href="../css/styles.css">
 
-    <!-- Favicon -->
-    <link rel="icon" href="../images/logo.png">
+<!-- Definicion de la informacion que se va a utilizar en la pagina, i.e., fuentes, estilos CSS, etc. Ademas se definr la informacion que se va a observar en la pestaña de la pagina, i.e., titulo y favicon. -->
+<head>
 
-    <!--Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-  </head>
+  <!--Definicion de la codificacion de caracteres usada-->
+  <meta charset="UTF-8">
+  <meta name="authoring-tool" content="Adobe_Animate_CC">
+
+  <!--Definicion de la escala inicial del viewport (area de visualizacion), esto es necesario para obtener un buen comportamiento de la pagina en el RWD-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Definicion de propiedades de identidad de la pagina: titulo y favicon-->
+  <!-- Titulo de la pagina-->
+  <title>Grecia Antigua</title>
+  
+  <!-- Inclusion del archivo de estilos CSS -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Definicion del favicon (icono que se muestra al lado del titulo de la pagina en la pestaña del navegador) -->
+  <link rel="icon" href="../images/logo.png">
+
+  <!-- Inclusion de fuentes usadas, en vez de descargalas se pueden llamar directamente del servidor de Google Fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+  <!-- Scripts de Javascript utilizados en la pagina-->
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script src="Mapa_Grecia.js?1607192124217"></script>
+
+  <!--Se paso el javascript generado por Animate al final del archivo js-->
+
+</head>
 
   <!-- Body -->
   <body>
@@ -21,13 +40,20 @@
     <!-- ******************************************************************************************** -->
     <!-- Header -->
     <header>
+
+      <!-- Definicion del menu de navegacion de la pagina -->
       <nav id="header-nav" class="navbar">
         <div class="container">
+
+          <!-- Se definen los contenidos que van en el menu de navegacion-->
           <div class="navbar-header">
+
+            <!-- Logo de la pagina, el cual es un enlance que direcciona a la pagina de inicio -->
             <a href="../index.html" class="pull-left visible-md visible-lg">
               <div id="logo-img"></div>
             </a>
-  
+            
+            <!-- Titulo de la pagina, el cual es un enlance que direcciona a la pagina de inicio -->
             <div>
               <span><a href="../index.html"><h1>Grecia Antigua</h1></a></span>
             </div>
@@ -38,9 +64,11 @@
               <img src="../images/menu.png" width="30px">
             </label>
             
+            <!-- Definicion de los elementos que se encuentran en el menu -->
             <span class="menu">
                 <ul> <!-- los botones son elementos de una lista que define el menu pero mantiene el mismo diseño de cada botón, la posición de esta lista depende del estado del checkbox-->
                     <li><a href="../index.html" target="_self"><div class="col-lg-2 col-md-2">Inicio</div></a></li>
+                    <li><a href="../mapa_interactivo/mapa.html" target="_self"><div class="col-lg-2 col-md-2">Mapa</div></a></li>
                     <li><a href="./ubicacion.html" target="_self"><div class="col-lg-2 col-md-2">Ubicación</div></a></li>
                     <li><a href="./personajes.html" target="_self"><div class="col-lg-2 col-md-2">Personajes</div></a></li>
                     <li><a href="./actividades.html" target="_self"><div class="col-lg-2 col-md-2">Actividades</div></a></li>
@@ -56,20 +84,30 @@
     <!-- ******************************************************************************************** -->
     <!-- ******************************************************************************************** -->
     <!--Main content-->
-
+    
+    <!-- Se crea un div el cual contendra todos los elementos del contenido principal -->
     <div class="container">
+
+      <!--Titulo del contenido-->
 			<h2 id="credits-title"> Créditos </h2>
-			<br>
+      <br>
+
+      <!-- Se crea un div que para darle margen a la izquierda al contenido. El div ocupa dos columnas en el tamaño de pantalla grande, una en el tamaño mediano y cero en los demas tamaños -->
       <div class="col-lg-2 col-md-1"></div>
+
+      <!-- Se crea un div que contendra el mapa de navegacion, el texto y los enlaces de las referencias -->
       <div class="creditos-links col-lg-8 col-md-10">
         
+        <!-- Se añade la imagen del mapa de navegacion -->
         <h3>Mapa de navegación</h3>
         <div id="back-map">
           <div id="navigation-map"></div>
         </div>
-
+        
+        <!-- Se crean listas sin ordernar las cuales contienen los enlances de referencias de cada pagina -->
         <h3>Página de inicio</h3>
         <ul>
+          <!--Se utiliza target blank para que al dar click al enlace se abra una nueva pestaña-->
           <li><a href="https://bit.ly/33PmM5P" target="_blank">bit.ly/33PmM5P</a></li>
           <li><a href="https://bit.ly/3jUBpua" target="_blank">bit.ly/3jUBpua</a></li>
           <li><a href="https://bit.ly/3jT8Q0r" target="_blank">bit.ly/3jT8Q0r</a></li>
@@ -80,11 +118,13 @@
           <li><a href="https://bit.ly/2GZ0K7S" target="_blank">bit.ly/2GZ0K7S</a></li>
           <li><a href="https://bit.ly/2SOyUOe" target="_blank">bit.ly/2SOyUOe</a></li>
         </ul>
+
         <h3>Página de ubicación</h3>
         <ul>
           <li><a href="https://bit.ly/3jZwTuI" target="_blank">bit.ly/3jZwTuI</a></li>
           <li><a href="https://bit.ly/370R1sK" target="_blank">bit.ly/370R1sK</a></li>
         </ul>
+
         <h3>Página de personajes</h3>
         <ul>
           <li><a href="https://bit.ly/2Fn01Na" target="_blank">bit.ly/2Fn01Na</a></li>
@@ -103,6 +143,7 @@
           <li><a href="https://bit.ly/34TkEZZ" target="_blank">bit.ly/34TkEZZ</a></li>
           <li><a href="https://bit.ly/3lGdj6S" target="_blank">bit.ly/3lGdj6S</a></li>
         </ul>
+
         <h3>Página de actividades</h3>
         <ul>
           <li><a href="https://bit.ly/33QoOmc" target="_blank">bit.ly/33QoOmc</a></li>
@@ -113,6 +154,7 @@
           <li><a href="https://bit.ly/2H270eN" target="_blank">bit.ly/2H270eN</a></li>
           <li><a href="https://bit.ly/2Ipl2bi" target="_blank">bit.ly/2Ipl2bi</a></li>
         </ul>
+
         <h3>Página de historia</h3>
         <ul>
           <li><a href="https://bit.ly/3nMyWUX" target="_blank">bit.ly/3nMyWUX</a></li>
@@ -123,27 +165,64 @@
           <li><a href="https://bit.ly/2GUzLKX" target="_blank">bit.ly/2GUzLKX</a></li>
         </ul>
 
+        <h3>Mapa interactivo</h3>
+        <!-- Se realiza la descripción de la propuesta del mapa interactivo. Se utiliza un parrafo con id="introduction" para poder darle el formato deseado en el arhivo CSS -->
+        <p id="introduction">Para el desarrollo del mapa interactivo se utilizó la herramienta Adobe Animate, en este se creó una escena para páginas web de tamaño medio y de estilo HTML5 Canvas. Dentro del escenario se definieron tres capas o Layers: mapa, información y botones. En la capa de mapa se colocó una imagen estática del mapa de la Grecia antigua. En la capa de botones se encontrarán todos los elementos interactivos de tipo "Symbol", los cuales son utilizados por el usuario para acceder a la información. Por último, en la capa de información se encuentra un elemento de tipo "Graphic" el cual es utilizado como marco para colocar la información deseada.<br><br>Se definieron seis lugares de Grecia para tener más información, estos son: Atenas, Esparta, Delfos, Olimpia, Troya y Cnonos. Al dar click en el botón asociado al sitio se despliega la información del lugar y dependiendo de este se puede dar click en botones de flechas a la izquierda o a la derecha para obtener más información del lugar, personajes célebres, eventos importantes, entre otros. Para volver al mapa original se tiene un botón de retornar ubicado en la esquina superior derecha.<br><br></p>
+        <ul>
+          <li><a href="https://bit.ly/2JP1s9d" target="_blank">bit.ly/2JP1s9d</a></li>
+          <li><a href="https://bit.ly/39MFNJA" target="_blank">bit.ly/39MFNJA</a></li>
+          <li><a href="https://bit.ly/37wrQMY" target="_blank">bit.ly/37wrQMY</a></li>
+          <li><a href="https://bit.ly/2IfQEAm" target="_blank">bit.ly/2IfQEAm</a></li>
+          <li><a href="https://bit.ly/3orrrST" target="_blank">bit.ly/3orrrST</a></li>
+          <li><a href="https://bit.ly/2LaN2AS" target="_blank">bit.ly/2LaN2AS</a></li>
+          <li><a href="https://bit.ly/39MqoJ5" target="_blank">bit.ly/39MqoJ5</a></li>
+          <li><a href="https://bit.ly/33Mexai" target="_blank">bit.ly/33Mexai</a></li>
+          <li><a href="https://bit.ly/37JMedY" target="_blank">bit.ly/37JMedY</a></li>
+          <li><a href="https://bit.ly/3lS7t2g" target="_blank">bit.ly/3lS7t2g</a></li>
+          <li><a href="https://bit.ly/3gh3jiU" target="_blank">bit.ly/3gh3jiU</a></li>
+          <li><a href="https://bit.ly/3ou0xKq" target="_blank">bit.ly/3ou0xKq</a></li>
+          <li><a href="https://bit.ly/2VNMRxb" target="_blank">bit.ly/2VNMRxb</a></li>
+          <li><a href="https://bit.ly/37HqlM2" target="_blank">bit.ly/37HqlM2</a></li>
+          <li><a href="https://bit.ly/2VJOBrk" target="_blank">bit.ly/2VJOBrk</a></li>
+          <li><a href="https://bit.ly/39MGDWK" target="_blank">bit.ly/39MGDWK</a></li>
+          <li><a href="https://bit.ly/3lIxJMd" target="_blank">bit.ly/3lIxJMd</a></li>
+          <li><a href="https://bit.ly/343THDF" target="_blank">bit.ly/343THDF</a></li>
+          <li><a href="https://bit.ly/3qvEiFs" target="_blank">bit.ly/3qvEiFs</a></li>
+          <li><a href="https://bit.ly/39FHjx8" target="_blank">bit.ly/39FHjx8</a></li>
+          <li><a href="https://bit.ly/37BneFr" target="_blank">bit.ly/37BneFr</a></li>
+          <li><a href="https://bit.ly/3osE1kQ" target="_blank">bit.ly/3osE1kQ</a></li>
+        </ul>
+
       </div> <!-- Content -->
+
+      <!-- Se crea un div que para darle margen a la derecha al contenido. El div ocupa dos columnas en el tamaño de pantalla grande, una en el tamaño mediano y cero en los demas tamaños -->
       <div class="col-lg-2 col-md-1"></div>
+
     </div>
 
     <!-- ******************************************************************************************** -->
     <!-- ******************************************************************************************** -->
+    <!-- Definicion del footer de la pagina-->
 
+    <!-- Se define el footer de la pagina-->
     <footer class="panel-footer">
       <div class="container">
         <div class="row">
+          <!-- Se crea una seccion donde esta la informacion de para quien se diseño la pagina-->
           <section id="madeto" class="col-sm-6 col-md-6 col-lg-6">
             <span>Hecho para la materia grafica interactiva</span><br>
             Sede Bogotá<br>
             Universidad Nacional de Colombia
             <br class="visible-xs visible-xxs">
             <br class="visible-xs visible-xxs">
+            <!-- Se define una linea horizontal que solo se vera cuando el tamaño de la pantalla del dispositivo sea suficientemente pequeño -->
             <hr class="visible-xs visible-xxs">
           </section>
+          <!-- Se crea una seccion donde esta la informacion acerca de quien diseño y programo la pagina-->
           <section id="designer" class="col-sm-6 col-md-6 col-lg-6">
             <div>
               <span>Diseñado por:</span><br>
+              <!-- Se crea un link el cual abre una aplicacion para enviar un correo al programador -->
               <span><a href="mailto:jmfajardod@unal.edu.co" target="_blank">Jose Manuel Fajardo</a></span>
             </div>
           </section>

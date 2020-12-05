@@ -87,7 +87,7 @@ header label:hover {
   font-size: 1.4rem;
   text-align: center;
   width: auto;
-  padding: 0 2vw 0 2vw; /* Se define que el padding sea proporcial al ancho de la ventana o la pantalla del dispositivo (vw - viewport widht) */
+  padding: 0 1vw 0 1vw; /* Se define que el padding sea proporcial al ancho de la ventana o la pantalla del dispositivo (vw - viewport widht) */
   margin-bottom: 10px;
 }
 
@@ -155,6 +155,7 @@ header label:hover {
 #link-boxes .personajes,
 #link-boxes .actividades,
 #link-boxes .historia,
+#link-boxes .mapa,
 #link-boxes .creditos{
   position: relative;
   height: 300px;
@@ -206,7 +207,38 @@ header label:hover {
   background-size: contain;
   opacity: 0.9;
 }
+#link-boxes .mapa{
+  background: url(../images/Mapa_grecia_antigua.gif) no-repeat;
+  background-position: cover;
+  opacity: 0.9;
+}
 /* END HOME PAGE */
+
+/******************************************************************************/
+/******************************************************************************/
+/* Estilos de la pagina del mapa interactivo */
+
+#animation_container {
+  margin:auto; 
+  width: 800px; 
+  height: 600px
+}
+
+#canvas{
+  position: absolute; 
+  display: block;
+}
+
+#dom_overlay_container{
+  pointer-events:none; 
+  overflow:hidden; 
+  width:800px; 
+  height:600px; 
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  display: block;
+}
 
 /******************************************************************************/
 /******************************************************************************/
@@ -606,7 +638,7 @@ header label:hover {
     text-align: center;
     width: auto;
     font-size: 1.3rem;
-    padding: 0 0vw 0 2vw;
+    padding: 0 0.5vw 0 0.5vw;
     margin-bottom: 10px;
   }
 
@@ -636,8 +668,8 @@ header label:hover {
   .menu li a div{
     text-align: center;
     width: auto;
-    font-size: 1.1rem;
-    padding: 0 0vw 0 2vw;
+    font-size: 1.0rem;
+    padding: 0 1vw 0 1vw;
     margin-bottom: 10px;
   }
 

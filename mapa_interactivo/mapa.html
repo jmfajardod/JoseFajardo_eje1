@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Definicion de la informacion que se va a utilizar en la pagina, i.e., fuentes, estilos CSS, etc. Ademas se definr la informacion que se va a observar en la pestaña de la pagina, i.e., titulo y favicon. -->
+<head>
+
+  <!--Definicion de la codificacion de caracteres usada-->
+  <meta charset="UTF-8">
+  <meta name="authoring-tool" content="Adobe_Animate_CC">
+
+  <!--Definicion de la escala inicial del viewport (area de visualizacion), esto es necesario para obtener un buen comportamiento de la pagina en el RWD-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Definicion de propiedades de identidad de la pagina: titulo y favicon-->
+  <!-- Titulo de la pagina-->
+  <title>Grecia Antigua</title>
+  
+  <!-- Inclusion del archivo de estilos CSS -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Definicion del favicon (icono que se muestra al lado del titulo de la pagina en la pestaña del navegador) -->
+  <link rel="icon" href="../images/logo.png">
+
+  <!-- Inclusion de fuentes usadas, en vez de descargalas se pueden llamar directamente del servidor de Google Fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+  <!-- Scripts de Javascript utilizados en la pagina-->
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script src="Mapa_Grecia.js?1607192124217"></script>
+
+  <!--Se paso el javascript generado por Animate al final del archivo js-->
+
+</head>
+<body onload="init();" style="margin:0px;">
+
+    <!-- ******************************************************************************************** -->
+    <!-- ******************************************************************************************** -->
+    <!-- Header -->
+    <header>
+
+      <!-- Definicion del menu de navegacion de la pagina -->
+      <nav id="header-nav" class="navbar">
+
+        <!-- Aunque no se esta usando Bootstrap se incluyen los contenidos dentro de un div llamado container para poder manejar el estilo de manera mas comoda -->
+        <div class="container">
+
+          <!-- Se definen los contenidos que van en el menu de navegacion-->
+          <div class="navbar-header">
+
+            <!-- Logo de la pagina, el cual es un enlance que direcciona a la pagina de inicio -->
+            <a href="../index.html" class="pull-left visible-md visible-lg">
+              <div id="logo-img"></div>
+            </a>
+            
+            <!-- Titulo de la pagina, el cual es un enlance que direcciona a la pagina de inicio -->
+            <div>
+              <span><a href="../index.html"><h1>Grecia Antigua</h1></a></span>
+            </div>
+  
+            <input type="checkbox" id="btn-menu"><!-- checkbox permite la opción boleana -->
+            <label for="btn-menu">
+              <!-- la imagen del ícono se muestra como label del checkbox pero se oculta cuando no se necesita -->
+              <img src="../images/menu.png" width="30px">
+            </label>
+            
+            <!-- Definicion de los elementos que se encuentran en el menu -->
+            <span class="menu">
+              <ul> <!-- los botones son elementos de una lista que define el menu pero mantiene el mismo diseño de cada botón, la posición de esta lista depende del estado del checkbox-->
+                  <li><a href="../index.html" target="_self"><div class="col-lg-2 col-md-2">Inicio</div></a></li>
+                  <li><a href="./mapa.html" target="_self"><div class="col-lg-2 col-md-2 menu-active">Mapa</div></a></li>
+                  <li><a href="../html/ubicacion.html" target="_self"><div class="col-lg-2 col-md-2">Ubicación</div></a></li>
+                  <li><a href="../html/personajes.html" target="_self"><div class="col-lg-2 col-md-2">Personajes</div></a></li>
+                  <li><a href="../html/actividades.html" target="_self"><div class="col-lg-2 col-md-2">Actividades</div></a></li>
+                  <li><a href="../html/historia.html" target="_self"><div class="col-lg-2 col-md-2">Historia</div></a></li>
+                  <li><a href="../html/creditos.html" target="_self"><div class="col-lg-2 col-md-2">Créditos</div></a></li>
+              </ul>
+          </span>	
+          
+        </div><!-- Fin .container -->
+      </nav><!-- Fin #header-nav -->
+    </header>
+
+    <!-- ******************************************************************************************** -->
+    <!-- ******************************************************************************************** -->
+    <!--Main content-->
+
+    <br><br>
+
+    <!-- Container del mapa interactivo -->
+    <!-- Se modifico el container para que los estilos de los elementos se encontraran en el archivo CSS-->
+	  <div id="animation_container">
+      <canvas id="canvas" width="800" height="600"></canvas>
+      <div id="dom_overlay_container"></div>
+    </div>
+    
+    <br><br>
+
+    <!-- ******************************************************************************************** -->
+    <!-- ******************************************************************************************** -->
+    <!-- Definicion del footer de la pagina-->
+
+    <!-- Se define el footer de la pagina-->
+    <footer class="panel-footer">
+      <div class="container">
+        <div class="row">
+          <!-- Se crea una seccion donde esta la informacion de para quien se diseño la pagina-->
+          <section id="madeto" class="col-sm-6 col-md-6 col-lg-6">
+            <span>Hecho para la materia grafica interactiva</span><br>
+            Sede Bogotá<br>
+            Universidad Nacional de Colombia
+            <br class="visible-xs visible-xxs">
+            <br class="visible-xs visible-xxs">
+            <!-- Se define una linea horizontal que solo se vera cuando el tamaño de la pantalla del dispositivo sea suficientemente pequeño -->
+            <hr class="visible-xs visible-xxs">
+          </section>
+          <!-- Se crea una seccion donde esta la informacion acerca de quien diseño y programo la pagina-->
+          <section id="designer" class="col-sm-6 col-md-6 col-lg-6">
+            <div>
+              <span>Diseñado por:</span><br>
+              <!-- Se crea un link el cual abre una aplicacion para enviar un correo al programador -->
+              <span><a href="mailto:jmfajardod@unal.edu.co" target="_blank">Jose Manuel Fajardo</a></span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>

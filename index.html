@@ -58,6 +58,7 @@
                 <!-- Los elementos del menu se crean dentro de una lista sin orden y cada uno de ellos es un enlace a la pagina deseada, declarada de forma relativa. -->
                 <ul>
                   <li><a href="./index.html" target="_self"><div class="col-lg-2 col-md-2 menu-active">Inicio</div></a></li>
+                  <li><a href="./mapa_interactivo/mapa.html" target="_self"><div class="col-lg-2 col-md-2">Mapa</div></a></li>
                   <li><a href="./html/ubicacion.html" target="_self"><div class="col-lg-2 col-md-2">Ubicación</div></a></li>
                   <li><a href="./html/personajes.html" target="_self"><div class="col-lg-2 col-md-2">Personajes</div></a></li>
                   <li><a href="./html/actividades.html" target="_self"><div class="col-lg-2 col-md-2">Actividades</div></a></li>
@@ -98,7 +99,15 @@
     <!-- Se define un container que tendra cajas que direccionan a cada una de las paginas -->
     <div id="link-boxes" class="container">
       <div class="row">
-        <!-- Para los primeros tres elementos se definen que ocupen 4 columnas en tamaños grandes y medio, seis columnas para pantallas pequeñas y doce para pantallas mas pequeñas -->
+        <!-- Para las cajas de secciones se define que ocupen 4 columnas en tamaños grandes y medio, seis columnas para pantallas pequeñas y doce para pantallas mas pequeñas -->
+        <div class=" col-lg-4 col-md-4 col-sm-6">
+          <a href="./mapa_interactivo/mapa.html" target="_self">
+            <div class="mapa">
+              <p>Mapa</p>
+            </div>
+          </a>
+        </div>
+
         <div class="col-lg-4 col-md-4 col-sm-6">
           <a href="./html/ubicacion.html" target="_self">
             <!-- Se crea un div para poder cambiar el fondo al deseado-->
@@ -107,6 +116,7 @@
             </div>
           </a>
         </div>
+
         <div class="col-lg-4 col-md-4 col-sm-6">
           <a href="./html/personajes.html" target="_self">
             <div class="personajes">
@@ -114,6 +124,7 @@
             </div>
           </a>
         </div>
+
         <div class="col-lg-4 col-md-4 col-sm-6">
           <a href="./html/actividades.html" target="_self">
             <div class="actividades">
@@ -122,10 +133,6 @@
           </a>
         </div>
         
-        <!-- Se definen unos elementos que no se veran cuando la pantalla sea tamaño pequeño o menor-->
-        <div class="col-lg-2 col-md-2 hidden-sm"></div>
-
-        <!-- Para los ultimos dos elementos se definen que ocupen 2 columnas en tamaños grandes y medio, seis columnas para pantallas pequeñas y doce para pantallas mas pequeñas -->
         <div class=" col-lg-4 col-md-4 col-sm-6">
           <a href="./html/historia.html" target="_self">
             <div class="historia">
@@ -133,6 +140,7 @@
             </div>
           </a>
         </div>
+
         <div class="col-sm-3 visible-sm"></div>
         <div class="col-lg-4 col-md-4 col-sm-6">
           <a href="./html/creditos.html" target="_self">
@@ -141,7 +149,6 @@
             </div>
           </a>
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-3"></div>
       </div>
     </div>
 
